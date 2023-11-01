@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\crud_project\\CRUD_Logistics\\CRUD_Logistics.csproj": {}
+    "E:\\crud_logistics\\CRUD_logistics\\CRUD_Logistics\\CRUD_Logistics.csproj": {}
   },
   "projects": {
-    "E:\\crud_project\\CRUD_Logistics\\CRUD_Logistics.csproj": {
+    "E:\\crud_logistics\\CRUD_logistics\\CRUD_Logistics\\CRUD_Logistics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\crud_project\\CRUD_Logistics\\CRUD_Logistics.csproj",
+        "projectUniqueName": "E:\\crud_logistics\\CRUD_logistics\\CRUD_Logistics\\CRUD_Logistics.csproj",
         "projectName": "CRUD_Logistics",
-        "projectPath": "E:\\crud_project\\CRUD_Logistics\\CRUD_Logistics.csproj",
+        "projectPath": "E:\\crud_logistics\\CRUD_logistics\\CRUD_Logistics\\CRUD_Logistics.csproj",
         "packagesPath": "C:\\Users\\milan\\.nuget\\packages\\",
-        "outputPath": "E:\\crud_project\\CRUD_Logistics\\obj\\",
+        "outputPath": "E:\\crud_logistics\\CRUD_logistics\\CRUD_Logistics\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\Microsoft\\VisualStudio\\Shared\\NuGetPackages"

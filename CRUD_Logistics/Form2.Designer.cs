@@ -56,6 +56,7 @@
             // 
             textBox2Log.Location = new Point(260, 222);
             textBox2Log.Name = "textBox2Log";
+            textBox2Log.PasswordChar = '*';
             textBox2Log.Size = new Size(180, 23);
             textBox2Log.TabIndex = 2;
             // 

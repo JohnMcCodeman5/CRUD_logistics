@@ -12,6 +12,8 @@ namespace CRUD_Logistics
 {
     public partial class Form2 : Form
     {
+        private string username;
+        private string password;
         public Form2()
         {
             InitializeComponent();
@@ -24,15 +26,14 @@ namespace CRUD_Logistics
 
         private void button1Log_Click(object sender, EventArgs e)
         {
-            String username = textBox1Log.Text;
-            String password = textBox2Log.Text;
+            this.username = textBox1Log.Text;
+            this.password = textBox2Log.Text;
 
-            Form1 form1 = new Form1(username, password);
+            Form1 form1 = new Form1(this.username, this.password);
 
             this.Hide();
 
             form1.Show();
-
         }
     }
 }
