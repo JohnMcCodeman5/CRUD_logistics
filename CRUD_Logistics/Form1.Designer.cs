@@ -35,10 +35,10 @@
             button1 = new Button();
             dataGridView1 = new DataGridView();
             panel_menu = new Panel();
-            menu_list_button = new Button();
             menu_button_delete = new Button();
             menu_button_update = new Button();
             menu_add_button = new Button();
+            menu_list_button = new Button();
             panel_list = new Panel();
             list_button_back = new Button();
             dataGridViewList = new DataGridView();
@@ -53,14 +53,27 @@
             button_update_back = new Button();
             label_update_age = new Label();
             label_update_title = new Label();
+            panel_delete = new Panel();
+            textBox_delete_name = new TextBox();
+            textBox_delete_age = new TextBox();
+            textBox_delete_id = new TextBox();
+            label_delete_name = new Label();
+            label_delete_age = new Label();
+            label_delete_id = new Label();
+            dataGridViewDelete = new DataGridView();
+            button_delete = new Button();
+            button_delete_back = new Button();
             add_button_back = new Button();
             label3 = new Label();
+            label_delete_title = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel_menu.SuspendLayout();
             panel_list.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewList).BeginInit();
             panel_update.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewUpdate).BeginInit();
+            panel_delete.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDelete).BeginInit();
             SuspendLayout();
             // 
             // textBox1
@@ -118,24 +131,14 @@
             // 
             // panel_menu
             // 
-            panel_menu.Controls.Add(menu_list_button);
             panel_menu.Controls.Add(menu_button_delete);
             panel_menu.Controls.Add(menu_button_update);
             panel_menu.Controls.Add(menu_add_button);
+            panel_menu.Controls.Add(menu_list_button);
             panel_menu.Location = new Point(27, 12);
             panel_menu.Name = "panel_menu";
-            panel_menu.Size = new Size(1197, 482);
+            panel_menu.Size = new Size(1207, 505);
             panel_menu.TabIndex = 6;
-            // 
-            // menu_list_button
-            // 
-            menu_list_button.Location = new Point(518, 45);
-            menu_list_button.Name = "menu_list_button";
-            menu_list_button.Size = new Size(177, 47);
-            menu_list_button.TabIndex = 3;
-            menu_list_button.Text = "List";
-            menu_list_button.UseVisualStyleBackColor = true;
-            menu_list_button.Click += menu_list_button_Click;
             // 
             // menu_button_delete
             // 
@@ -145,6 +148,7 @@
             menu_button_delete.TabIndex = 2;
             menu_button_delete.Text = "Delete";
             menu_button_delete.UseVisualStyleBackColor = true;
+            menu_button_delete.Click += menu_button_delete_Click;
             // 
             // menu_button_update
             // 
@@ -166,13 +170,23 @@
             menu_add_button.UseVisualStyleBackColor = true;
             menu_add_button.Click += menu_add_button_Click;
             // 
+            // menu_list_button
+            // 
+            menu_list_button.Location = new Point(518, 45);
+            menu_list_button.Name = "menu_list_button";
+            menu_list_button.Size = new Size(177, 47);
+            menu_list_button.TabIndex = 3;
+            menu_list_button.Text = "List";
+            menu_list_button.UseVisualStyleBackColor = true;
+            menu_list_button.Click += menu_list_button_Click;
+            // 
             // panel_list
             // 
             panel_list.Controls.Add(list_button_back);
             panel_list.Controls.Add(dataGridViewList);
-            panel_list.Location = new Point(24, 9);
+            panel_list.Location = new Point(27, 12);
             panel_list.Name = "panel_list";
-            panel_list.Size = new Size(1207, 485);
+            panel_list.Size = new Size(1207, 505);
             panel_list.TabIndex = 4;
             // 
             // list_button_back
@@ -208,7 +222,7 @@
             panel_update.Controls.Add(label_update_title);
             panel_update.Location = new Point(27, 12);
             panel_update.Name = "panel_update";
-            panel_update.Size = new Size(1207, 485);
+            panel_update.Size = new Size(1207, 505);
             panel_update.TabIndex = 2;
             // 
             // label_update_name
@@ -302,6 +316,103 @@
             label_update_title.TabIndex = 9;
             label_update_title.Text = "Update Existing Entries";
             // 
+            // panel_delete
+            // 
+            panel_delete.Controls.Add(label_delete_title);
+            panel_delete.Controls.Add(textBox_delete_name);
+            panel_delete.Controls.Add(textBox_delete_age);
+            panel_delete.Controls.Add(textBox_delete_id);
+            panel_delete.Controls.Add(label_delete_name);
+            panel_delete.Controls.Add(label_delete_age);
+            panel_delete.Controls.Add(label_delete_id);
+            panel_delete.Controls.Add(dataGridViewDelete);
+            panel_delete.Controls.Add(button_delete);
+            panel_delete.Controls.Add(button_delete_back);
+            panel_delete.Location = new Point(27, 12);
+            panel_delete.Name = "panel_delete";
+            panel_delete.Size = new Size(1207, 505);
+            panel_delete.TabIndex = 9;
+            // 
+            // textBox_delete_name
+            // 
+            textBox_delete_name.Location = new Point(693, 265);
+            textBox_delete_name.Name = "textBox_delete_name";
+            textBox_delete_name.Size = new Size(163, 23);
+            textBox_delete_name.TabIndex = 6;
+            // 
+            // textBox_delete_age
+            // 
+            textBox_delete_age.Location = new Point(693, 179);
+            textBox_delete_age.Name = "textBox_delete_age";
+            textBox_delete_age.Size = new Size(163, 23);
+            textBox_delete_age.TabIndex = 5;
+            // 
+            // textBox_delete_id
+            // 
+            textBox_delete_id.Location = new Point(693, 99);
+            textBox_delete_id.Name = "textBox_delete_id";
+            textBox_delete_id.Size = new Size(163, 23);
+            textBox_delete_id.TabIndex = 4;
+            // 
+            // label_delete_name
+            // 
+            label_delete_name.AutoSize = true;
+            label_delete_name.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label_delete_name.Location = new Point(693, 243);
+            label_delete_name.Name = "label_delete_name";
+            label_delete_name.Size = new Size(52, 21);
+            label_delete_name.TabIndex = 3;
+            label_delete_name.Text = "Name";
+            // 
+            // label_delete_age
+            // 
+            label_delete_age.AutoSize = true;
+            label_delete_age.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label_delete_age.Location = new Point(693, 155);
+            label_delete_age.Name = "label_delete_age";
+            label_delete_age.Size = new Size(37, 21);
+            label_delete_age.TabIndex = 2;
+            label_delete_age.Text = "Age";
+            // 
+            // label_delete_id
+            // 
+            label_delete_id.AutoSize = true;
+            label_delete_id.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label_delete_id.Location = new Point(693, 75);
+            label_delete_id.Name = "label_delete_id";
+            label_delete_id.Size = new Size(25, 21);
+            label_delete_id.TabIndex = 1;
+            label_delete_id.Text = "ID";
+            // 
+            // dataGridViewDelete
+            // 
+            dataGridViewDelete.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewDelete.Location = new Point(75, 34);
+            dataGridViewDelete.Name = "dataGridViewDelete";
+            dataGridViewDelete.RowTemplate.Height = 25;
+            dataGridViewDelete.Size = new Size(564, 376);
+            dataGridViewDelete.TabIndex = 0;
+            // 
+            // button_delete
+            // 
+            button_delete.Location = new Point(693, 318);
+            button_delete.Name = "button_delete";
+            button_delete.Size = new Size(96, 31);
+            button_delete.TabIndex = 8;
+            button_delete.Text = "Delete";
+            button_delete.UseVisualStyleBackColor = true;
+            button_delete.Click += button_delete_Click;
+            // 
+            // button_delete_back
+            // 
+            button_delete_back.Location = new Point(1118, 11);
+            button_delete_back.Name = "button_delete_back";
+            button_delete_back.Size = new Size(75, 32);
+            button_delete_back.TabIndex = 7;
+            button_delete_back.Text = "Back";
+            button_delete_back.UseVisualStyleBackColor = true;
+            button_delete_back.Click += button_delete_back_Click;
+            // 
             // add_button_back
             // 
             add_button_back.Location = new Point(27, 12);
@@ -322,23 +433,34 @@
             label3.TabIndex = 8;
             label3.Text = "Add A New Entry";
             // 
+            // label_delete_title
+            // 
+            label_delete_title.AutoSize = true;
+            label_delete_title.Font = new Font("Sitka Small", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label_delete_title.Location = new Point(683, 29);
+            label_delete_title.Name = "label_delete_title";
+            label_delete_title.Size = new Size(173, 28);
+            label_delete_title.TabIndex = 9;
+            label_delete_title.Text = "Delete An Entry";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
-            ClientSize = new Size(1286, 555);
-            Controls.Add(panel_list);
+            ClientSize = new Size(1296, 569);
+            Controls.Add(panel_delete);
             Controls.Add(panel_update);
             Controls.Add(panel_menu);
-            Controls.Add(dataGridView1);
-            Controls.Add(button1);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(add_button_back);
+            Controls.Add(panel_list);
             Controls.Add(label3);
+            Controls.Add(label1);
+            Controls.Add(textBox1);
+            Controls.Add(label2);
+            Controls.Add(textBox2);
+            Controls.Add(button1);
+            Controls.Add(dataGridView1);
+            Controls.Add(add_button_back);
             Name = "Form1";
             Text = "Logistics";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -348,6 +470,9 @@
             panel_update.ResumeLayout(false);
             panel_update.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewUpdate).EndInit();
+            panel_delete.ResumeLayout(false);
+            panel_delete.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDelete).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -370,7 +495,7 @@
         private Panel panel_list;
         private DataGridView dataGridViewList;
         private Button list_button_back;
-        private Panel panel1;
+        private Panel panel_delete;
         private Panel panel_update;
         private DataGridView dataGridViewUpdate;
         private Label label_update_id;
@@ -382,5 +507,15 @@
         private Label label_update_name;
         private Button button_update_back;
         private Label label_update_title;
+        private DataGridView dataGridViewDelete;
+        private TextBox textBox_delete_name;
+        private TextBox textBox_delete_age;
+        private TextBox textBox_delete_id;
+        private Label label_delete_name;
+        private Label label_delete_age;
+        private Label label_delete_id;
+        private Button button_delete;
+        private Button button_delete_back;
+        private Label label_delete_title;
     }
 }
