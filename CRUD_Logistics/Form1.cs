@@ -2,6 +2,7 @@ using System;
 using System.Windows.Forms;
 using CRUD_Logistics.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace CRUD_Logistics
 {
@@ -15,11 +16,14 @@ namespace CRUD_Logistics
             this.username = username;
             this.password = password;
             this.context = new AppDbContext(this.username, this.password);
-            InitializeComponent();
-            panel_list.Visible = false;
-            panel_menu.Visible = true;
-            
 
+            InitializeComponent();
+
+            panel_list.Visible = false;
+            panel_update.Visible = false;
+            panel_menu.Visible = true;
+
+            dataGridViewUpdate.CellClick += update_cell_click;
             //LoadData(username, password);
         }
 
@@ -42,15 +46,16 @@ namespace CRUD_Logistics
         {
             var people = this.context.People.ToList();
             dataGridView1.DataSource = people;
-
         }
 
         private void menu_list_button_Click(object sender, EventArgs e)
         {
-            panel_menu.Visible = false;
             panel_list.Visible = true;
+            panel_menu.Visible = false;
+            panel_update.Visible = false;
             var data = this.context.People.ToList();
             dataGridViewList.DataSource = data;
+            this.Invalidate();
         }
 
         private void menu_add_button_Click(object sender, EventArgs e)
@@ -66,8 +71,68 @@ namespace CRUD_Logistics
 
         private void list_button_back_Click(object sender, EventArgs e)
         {
-            panel_list.Visible=false;
+            panel_list.Visible = false;
             panel_menu.Visible = true;
         }
+
+        private void button_update_back_Click(object sender, EventArgs e)
+        {
+            panel_update.Visible = false;
+            panel_menu.Visible = true;
+        }
+
+        private void menu_button_update_Click(object sender, EventArgs e)
+        {
+            panel_menu.Visible = false;
+            panel_list.Visible = false;
+            panel_update.Visible = true;
+            var people = this.context.People.ToList();
+            dataGridViewUpdate.DataSource = people;
+        }
+
+        private void button_update_change_Click(object sender, EventArgs e)
+        {
+            if (textBox_update_name.Text != null && textBox_update_age.Text != null)
+            {
+                int id = int.Parse(textBox_update_id.Text);
+
+                string sqlQuery = $"SELECT * FROM People WHERE Id = {id}";
+
+                People person = context.People.FromSqlRaw(sqlQuery).FirstOrDefault();
+
+                person.name = textBox_update_name.Text;
+                person.age = int.Parse(textBox_update_age.Text);
+
+                context.Entry(person).State = EntityState.Modified;
+
+                context.SaveChanges();
+
+                var people = this.context.People.ToList();
+                dataGridViewUpdate.DataSource = people;
+            }
+            else
+            {
+                MessageBox.Show($"All fields must be filled!");
+            }
+        }
+
+        private void update_cell_click(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < dataGridViewUpdate.Rows.Count)
+            {
+                int id = Convert.ToInt32(dataGridViewUpdate.Rows[e.RowIndex].Cells["id"].Value);
+
+                string sqlQuery = $"SELECT * FROM People WHERE Id = {id}";
+
+                People person = context.People.FromSqlRaw(sqlQuery).FirstOrDefault();
+
+                textBox_update_id.Text = person.id.ToString();
+                textBox_update_name.Text = person.name;
+                textBox_update_age.Text = person.age.ToString();
+
+                //MessageBox.Show($"It is: {person.name}!");
+            }
+        }
+
     }
 }
