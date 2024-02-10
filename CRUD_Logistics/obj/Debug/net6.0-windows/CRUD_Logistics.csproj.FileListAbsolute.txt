@@ -86,7 +86,6 @@ E:\crud_logistics\CRUD_logistics\CRUD_Logistics\bin\Debug\net6.0-windows\runtime
 E:\crud_logistics\CRUD_logistics\CRUD_Logistics\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.csproj.AssemblyReference.cache
 E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.Form1.resources
-E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.Form2.resources
 E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.csproj.GenerateResource.cache
 E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.GeneratedMSBuildEditorConfig.editorconfig
 E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.AssemblyInfoInputs.cache
@@ -98,3 +97,5 @@ E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\refint\
 E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.pdb
 E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.genruntimeconfig.cache
 E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\ref\CRUD_Logistics.dll
+E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.FormLogin.resources
+E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.Form3.resources

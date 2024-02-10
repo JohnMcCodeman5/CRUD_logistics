@@ -1,6 +1,6 @@
 ﻿namespace CRUD_Logistics
 {
-    partial class Form2
+    partial class FormLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -33,11 +33,13 @@
             textBox2Log = new TextBox();
             label1Log = new Label();
             label2Log = new Label();
+            label3Log = new Label();
+            textBox3Log = new TextBox();
             SuspendLayout();
             // 
             // button1Log
             // 
-            button1Log.Location = new Point(298, 291);
+            button1Log.Location = new Point(296, 308);
             button1Log.Name = "button1Log";
             button1Log.Size = new Size(100, 32);
             button1Log.TabIndex = 0;
@@ -54,7 +56,7 @@
             // 
             // textBox2Log
             // 
-            textBox2Log.Location = new Point(260, 222);
+            textBox2Log.Location = new Point(260, 185);
             textBox2Log.Name = "textBox2Log";
             textBox2Log.PasswordChar = '*';
             textBox2Log.Size = new Size(180, 23);
@@ -74,23 +76,42 @@
             // 
             label2Log.AutoSize = true;
             label2Log.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2Log.Location = new Point(260, 198);
+            label2Log.Location = new Point(260, 161);
             label2Log.Name = "label2Log";
             label2Log.Size = new Size(76, 21);
             label2Log.TabIndex = 4;
             label2Log.Text = "Password";
             // 
-            // Form2
+            // label3Log
+            // 
+            label3Log.AutoSize = true;
+            label3Log.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3Log.Location = new Point(260, 231);
+            label3Log.Name = "label3Log";
+            label3Log.Size = new Size(45, 21);
+            label3Log.TabIndex = 6;
+            label3Log.Text = "Table";
+            // 
+            // textBox3Log
+            // 
+            textBox3Log.Location = new Point(260, 255);
+            textBox3Log.Name = "textBox3Log";
+            textBox3Log.Size = new Size(180, 23);
+            textBox3Log.TabIndex = 5;
+            // 
+            // FormLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(730, 450);
+            Controls.Add(label3Log);
+            Controls.Add(textBox3Log);
             Controls.Add(label2Log);
             Controls.Add(label1Log);
             Controls.Add(textBox2Log);
             Controls.Add(textBox1Log);
             Controls.Add(button1Log);
-            Name = "Form2";
+            Name = "FormLogin";
             Text = "Login";
             ResumeLayout(false);
             PerformLayout();
@@ -103,5 +124,7 @@
         private TextBox textBox2Log;
         private Label label1Log;
         private Label label2Log;
+        private Label label3Log;
+        private TextBox textBox3Log;
     }
 }

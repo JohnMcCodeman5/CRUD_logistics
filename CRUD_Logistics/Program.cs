@@ -9,7 +9,7 @@ namespace CRUD_Logistics
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form2());
+            Application.Run(new FormLogin());
             //Application.Run(new Form1());
         }
     }

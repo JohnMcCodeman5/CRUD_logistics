@@ -190,5 +190,17 @@ namespace CRUD_Logistics
                 textBox_delete_age.Text = person.age.ToString();
             }
         }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+
+            //check if app closing is intentional
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                // Terminate the application
+                Application.Exit();
+            }
+        }
     }
 }
