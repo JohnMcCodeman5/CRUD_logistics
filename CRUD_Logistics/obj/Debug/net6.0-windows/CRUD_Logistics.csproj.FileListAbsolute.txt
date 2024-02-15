@@ -98,4 +98,11 @@ E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Lo
 E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.genruntimeconfig.cache
 E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\ref\CRUD_Logistics.dll
 E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.FormLogin.resources
-E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.Form3.resources
+E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.FormJob.resources
+E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.BaseFormJob.resources
+E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.PeopleMenu.resources
+E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.BaseForm.resources
+E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.UserControls.PeopleList.resources
+E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.UserControls.PeopleAdd.resources
+E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.UserControls.PeopleUpdate.resources
+E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.UserControls.PeopleDelete.resources

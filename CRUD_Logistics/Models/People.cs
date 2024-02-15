@@ -11,6 +11,8 @@ namespace CRUD_Logistics.Models
         public int id { get; set; }
         public string name { get; set; }
         public int age { get; set; }
+        public string jobTitle { get; set; }
+        public int job { get; set; }
 
     }
 }

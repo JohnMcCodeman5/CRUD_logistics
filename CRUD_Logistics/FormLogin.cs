@@ -39,10 +39,10 @@ namespace CRUD_Logistics
                     form1.Show();
                     break;
 
-                case "job":
-                    Form3 form3 = new Form3(this.username, this.password);
+                case "test":
+                    BaseForm form = new BaseForm(this.username, this.password);
                     this.Hide();
-                    form3.Show();
+                    form.Show();
                     break;
 
                 default:

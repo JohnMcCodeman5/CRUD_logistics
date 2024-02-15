@@ -1,17 +1,23 @@
-using System;
-using System.Windows.Forms;
-using CRUD_Logistics.Models;
+﻿using CRUD_Logistics.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CRUD_Logistics
 {
-    public partial class Form1 : Form
+    public partial class FormJob : UserControl
     {
         private string username;
         private string password;
         public AppDbContext context;
-        public Form1(string username, string password)
+        public FormJob(string username, string password)
         {
             this.username = username;
             this.password = password;
@@ -26,7 +32,6 @@ namespace CRUD_Logistics
 
             dataGridViewUpdate.CellClick += update_cell_click;
             dataGridViewDelete.CellClick += delete_cell_click;
-            //LoadData(username, password);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -64,29 +69,41 @@ namespace CRUD_Logistics
         private void menu_add_button_Click(object sender, EventArgs e)
         {
             panel_menu.Visible = false;
+            panel_update.Visible = false;
+            panel_delete.Visible = false;
+            panel_list.Visible = false;
             load_data_add();
         }
 
         private void add_button_back_Click(object sender, EventArgs e)
         {
+            panel_list.Visible = false;
+            panel_update.Visible = false;
+            panel_update.Visible = false;
             panel_menu.Visible = true;
         }
 
         private void list_button_back_Click(object sender, EventArgs e)
         {
+            panel_update.Visible = false;
+            panel_update.Visible = false;
             panel_list.Visible = false;
             panel_menu.Visible = true;
         }
 
         private void button_update_back_Click(object sender, EventArgs e)
         {
+            panel_list.Visible = false;
+            panel_update.Visible = false;
             panel_update.Visible = false;
             panel_menu.Visible = true;
         }
 
         private void button_delete_back_Click(object sender, EventArgs e)
         {
+            panel_update.Visible = false;
             panel_delete.Visible = false;
+            panel_list.Visible = false;
             panel_menu.Visible = true;
         }
 
@@ -170,7 +187,6 @@ namespace CRUD_Logistics
                 textBox_update_id.Text = person.id.ToString();
                 textBox_update_name.Text = person.name;
                 textBox_update_age.Text = person.age.ToString();
-                textBox_update_job.Text = person.job.ToString();
 
                 //MessageBox.Show($"It is: {person.name}!");
             }
@@ -189,19 +205,6 @@ namespace CRUD_Logistics
                 textBox_delete_id.Text = person.id.ToString();
                 textBox_delete_name.Text = person.name;
                 textBox_delete_age.Text = person.age.ToString();
-                textBox_delete_job.Text = person.job.ToString();
-            }
-        }
-
-        protected override void OnFormClosing(FormClosingEventArgs e)
-        {
-            base.OnFormClosing(e);
-
-            //check if app closing is intentional
-            if (e.CloseReason == CloseReason.UserClosing)
-            {
-                // Terminate the application
-                Application.Exit();
             }
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace CRUD_Logistics
 {
-    partial class Form3
+    partial class BaseForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             SuspendLayout();
             // 
-            // Form3
+            // BaseForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1296, 569);
-            Name = "Form3";
-            Text = "Form3";
+            Name = "BaseForm";
+            Text = "BaseForm";
             ResumeLayout(false);
         }
 
