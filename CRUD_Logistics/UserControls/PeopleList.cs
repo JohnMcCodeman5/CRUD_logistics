@@ -33,6 +33,14 @@ namespace CRUD_Logistics.UserControls
         {
             this.Visible = false;
             form.peopleMenu.Visible = true;
+
+            form.loadData();
+        }
+
+        public void loadData()
+        {
+            var people = this.context.People.ToList();
+            dataGridView_people_list.DataSource = people;
         }
     }
 }

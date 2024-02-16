@@ -45,6 +45,7 @@ namespace CRUD_Logistics.UserControls
 
             var people = this.context.People.ToList();
             dataGridView_people_delete.DataSource = people;
+            form.loadData();
         }
 
         private void update_cell_click(object sender, DataGridViewCellEventArgs e)
@@ -64,6 +65,12 @@ namespace CRUD_Logistics.UserControls
                 textBox5.Text = person.job.ToString();
                 //MessageBox.Show($"It is: {person.name}!");
             }
+        }
+
+        public void loadData()
+        {
+            var people = this.context.People.ToList();
+            dataGridView_people_delete.DataSource = people;
         }
     }
 }

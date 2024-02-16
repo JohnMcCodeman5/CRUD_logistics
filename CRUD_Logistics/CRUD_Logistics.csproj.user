@@ -4,12 +4,6 @@
     <Compile Update="BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="BaseFormJob.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FormJob.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>

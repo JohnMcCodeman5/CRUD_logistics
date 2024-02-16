@@ -1,5 +1,6 @@
 ﻿using CRUD_Logistics.UserControls;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,14 +25,17 @@ namespace CRUD_Logistics
         public PeopleUpdate peopleUpdate;
         public PeopleDelete peopleDelete;
 
-        public BaseForm(string username, string password)
+        private List<UserControl> userControls;
+
+        public BaseForm(string username, string password, FormLogin loginForm)
         {
             this.username = username;
             this.password = password;
+            this.userControls = new List<UserControl>();
 
             this.context = new AppDbContext(username, password);
 
-            this.peopleMenu = new PeopleMenu(context, this);
+            this.peopleMenu = new PeopleMenu(context, this, loginForm);
             this.peopleList = new PeopleList(context, this);
             this.peopleAdd = new PeopleAdd(context, this);
             this.peopleUpdate = new PeopleUpdate(context, this);
@@ -40,9 +44,13 @@ namespace CRUD_Logistics
             InitializeComponent();
 
             this.Controls.Add(peopleMenu);
+            this.userControls.Append(peopleList);
             this.Controls.Add(peopleList);
+            this.userControls.Append(peopleAdd);
             this.Controls.Add(peopleAdd);
+            this.userControls.Append(peopleUpdate);
             this.Controls.Add(peopleUpdate);
+            this.userControls.Append(peopleDelete);
             this.Controls.Add(peopleDelete);
             this.peopleList.Visible = false;
             this.peopleAdd.Visible = false;
@@ -60,6 +68,14 @@ namespace CRUD_Logistics
                 // Terminate the application
                 Application.Exit();
             }
+        }
+
+        public void loadData()
+        {
+            this.peopleList.loadData();
+            this.peopleAdd.loadData();
+            this.peopleUpdate.loadData();
+            this.peopleDelete.loadData();
         }
     }
 }

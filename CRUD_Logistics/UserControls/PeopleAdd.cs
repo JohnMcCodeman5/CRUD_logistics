@@ -38,10 +38,11 @@ namespace CRUD_Logistics.UserControls
             context.People.Add(newPerson);
             context.SaveChanges();
 
-            load_data();
+            loadData();
+            form.loadData();
         }
 
-        private void load_data()
+        public void loadData()
         {
             var people = this.context.People.ToList();
             dataGridView_people_add.DataSource = people;
