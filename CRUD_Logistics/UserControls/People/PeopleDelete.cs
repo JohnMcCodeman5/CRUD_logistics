@@ -37,9 +37,15 @@ namespace CRUD_Logistics.UserControls
         {
             int id = int.Parse(textBox1.Text);
 
+            int jobID = int.Parse(textBox5.Text);
+
             string sqlQuery = $"DELETE FROM People WHERE Id = {id}";
 
             context.Database.ExecuteSqlRaw(sqlQuery);
+
+            string updateJobEmployeeCount = $"UPDATE Job AS j SET j.num_of_employees = j.num_of_employees - 1 WHERE j.id = {jobID}";
+
+            context.Database.ExecuteSqlRaw(updateJobEmployeeCount);
 
             context.SaveChanges();
 

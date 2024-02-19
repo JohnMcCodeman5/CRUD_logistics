@@ -1,4 +1,6 @@
 ﻿using CRUD_Logistics.Models;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +25,13 @@ namespace CRUD_Logistics.UserControls
             InitializeComponent();
             var people = this.context.People.ToList();
             dataGridView_people_add.DataSource = people;
+            var jobs = context.Job.ToList();
+            foreach (var job in jobs)
+            {
+                comboBox1.Items.Add(job.name);
+            }
+            comboBox1.SelectedIndexChanged += assign_job_id;
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void button_add_Click(object sender, EventArgs e)
@@ -31,11 +40,17 @@ namespace CRUD_Logistics.UserControls
             {
                 name = textBox1.Text,
                 age = int.Parse(textBox2.Text),
-                jobTitle = textBox3.Text,
+                jobTitle = comboBox1.Text,
+                //jobTitle = textBox3.Text,
                 job = int.Parse(textBox4.Text)
             };
 
             context.People.Add(newPerson);
+
+            string updateJobEmployeeCount = $"UPDATE Job AS j SET j.num_of_employees = j.num_of_employees + 1 WHERE j.id = {newPerson.job}";
+
+            context.Database.ExecuteSqlRaw(updateJobEmployeeCount);
+
             context.SaveChanges();
 
             loadData();
@@ -52,6 +67,22 @@ namespace CRUD_Logistics.UserControls
         {
             this.Visible = false;
             form.peopleMenu.Visible = true;
+        }
+
+        private void assign_job_id(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex != -1)
+            {
+
+                string selectedOption = comboBox1.SelectedItem.ToString();
+                var sqlQuery = $"SELECT * FROM Job AS j WHERE j.name = '{selectedOption}'";
+                var job = context.Job.FromSqlRaw(sqlQuery).FirstOrDefault();
+                textBox4.Text = job.id.ToString();
+            }
+            else
+            {
+                textBox4.Text = string.Empty;
+            }
         }
     }
 }

@@ -33,16 +33,16 @@ namespace CRUD_Logistics
 
             switch (this.table)
             {
-                case "other":
-                    Form1 form1 = new Form1(this.username, this.password);
+                case "job":
+                    BaseFormJob formJob = new BaseFormJob(this.username, this.password, this);
                     this.Hide();
-                    form1.Show();
+                    formJob.Show();
                     break;
 
                 case "people":
-                    BaseForm form = new BaseForm(this.username, this.password, this);
+                    BaseForm formPeople = new BaseForm(this.username, this.password, this);
                     this.Hide();
-                    form.Show();
+                    formPeople.Show();
                     break;
 
                 default:

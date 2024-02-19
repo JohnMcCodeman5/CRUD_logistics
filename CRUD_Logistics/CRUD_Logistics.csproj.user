@@ -4,25 +4,40 @@
     <Compile Update="BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="BaseFormJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormPeople.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="UserControls\PeopleAdd.cs">
+    <Compile Update="UserControls\Job\JobAdd.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControls\PeopleDelete.cs">
+    <Compile Update="UserControls\Job\JobDelete.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControls\PeopleList.cs">
+    <Compile Update="UserControls\Job\JobList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControls\PeopleMenu.cs">
+    <Compile Update="UserControls\Job\JobMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="UserControls\PeopleUpdate.cs">
+    <Compile Update="UserControls\Job\JobUpdate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\People\PeopleAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\People\PeopleDelete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\People\PeopleList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\People\PeopleMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\People\PeopleUpdate.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

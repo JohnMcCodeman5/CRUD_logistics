@@ -85,7 +85,6 @@ E:\crud_logistics\CRUD_logistics\CRUD_Logistics\bin\Debug\net6.0-windows\runtime
 E:\crud_logistics\CRUD_logistics\CRUD_Logistics\bin\Debug\net6.0-windows\runtimes\win-x64\native\krbcc64.dll
 E:\crud_logistics\CRUD_logistics\CRUD_Logistics\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.csproj.AssemblyReference.cache
-E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.Form1.resources
 E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.csproj.GenerateResource.cache
 E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.GeneratedMSBuildEditorConfig.editorconfig
 E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.AssemblyInfoInputs.cache
@@ -104,3 +103,9 @@ E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Lo
 E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.UserControls.PeopleAdd.resources
 E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.UserControls.PeopleUpdate.resources
 E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.UserControls.PeopleDelete.resources
+E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.BaseFormJob.resources
+E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.UserControls.Job.JobMenu.resources
+E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.UserControls.JobList.resources
+E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.UserControls.Job.JobAdd.resources
+E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.UserControls.Job.JobDelete.resources
+E:\crud_logistics\CRUD_logistics\CRUD_Logistics\obj\Debug\net6.0-windows\CRUD_Logistics.UserControls.Job.JobUpdate.resources

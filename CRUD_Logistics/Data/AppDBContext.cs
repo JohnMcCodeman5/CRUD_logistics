@@ -1,10 +1,12 @@
 ﻿using CRUD_Logistics.Models;
+using CRUD_Logistics.Models.JobClass;
 using Microsoft.EntityFrameworkCore;
 using CRUD_Logistics.Models;
 
 public class AppDbContext : DbContext
 {
     public DbSet<People>? People { get; set; }
+    public DbSet<Job>? Job { get; set; }
     public String username { get; set; }
     public String password { get; set; }
 

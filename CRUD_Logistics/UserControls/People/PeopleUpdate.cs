@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CRUD_Logistics.UserControls
 {
@@ -25,12 +26,14 @@ namespace CRUD_Logistics.UserControls
             var people = this.context.People.ToList();
             dataGridView_people_update.DataSource = people;
             dataGridView_people_update.CellClick += update_cell_click;
-        }
+            var jobs = context.Job.ToList();
+            foreach (var job in jobs)
+            {
+                comboBox1.Items.Add(job.name);
+            }
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.SelectedIndexChanged += assign_job_id;
 
-        private void load_data()
-        {
-            var people = this.context.People.ToList();
-            dataGridView_people_update.DataSource = people;
         }
 
         private void button_back_Click(object sender, EventArgs e)
@@ -43,32 +46,44 @@ namespace CRUD_Logistics.UserControls
         {
             foreach (Control control in this.Controls)
             {
-                if (control is TextBox textBox)
+                if (control is System.Windows.Forms.TextBox textBox)
                 {
                     if (string.IsNullOrWhiteSpace(textBox.Text))
                     {
-                        MessageBox.Show("All fields must be filled!");
+                        MessageBox.Show("All fields must be filled!", "Empty Fields Detected", MessageBoxButtons.OK);
                     }
                 }
             }
 
             int id = int.Parse(textBox1.Text);
 
-             string sqlQuery = $"SELECT * FROM People WHERE Id = {id}";
+            string sqlQuery = $"SELECT * FROM People WHERE Id = {id}";
 
-             People person = context.People.FromSqlRaw(sqlQuery).FirstOrDefault();
+            People person = context.People.FromSqlRaw(sqlQuery).FirstOrDefault();
 
-             person.name = textBox2.Text;
-             person.age = int.Parse(textBox3.Text);
-             person.jobTitle = textBox4.Text;
-             person.job = int.Parse(textBox5.Text);
+            int jobID = person.job;
 
-             context.Entry(person).State = EntityState.Modified;
+            person.name = textBox2.Text;
+            person.age = int.Parse(textBox3.Text);
+            person.jobTitle = comboBox1.Text;
+            person.job = int.Parse(textBox5.Text);
 
-             context.SaveChanges();
+            context.Entry(person).State = EntityState.Modified;
 
-             var people = this.context.People.ToList();
-             dataGridView_people_update.DataSource = people;
+            if (person.job != jobID)
+            {
+                context.Database.BeginTransaction();
+                string increaseJobEmployeeCount = $"UPDATE Job AS j SET j.num_of_employees = j.num_of_employees + 1 WHERE j.id = {person.job}";
+                context.Database.ExecuteSqlRaw(increaseJobEmployeeCount);
+                string decreaseJobEmployeeCount = $"UPDATE Job AS j SET j.num_of_employees = j.num_of_employees - 1 WHERE j.id = {jobID}";
+                context.Database.ExecuteSqlRaw(decreaseJobEmployeeCount);
+                context.Database.CommitTransaction();
+            }
+
+            context.SaveChanges();
+
+            var people = this.context.People.ToList();
+            dataGridView_people_update.DataSource = people;
 
             form.loadData();
         }
@@ -86,7 +101,7 @@ namespace CRUD_Logistics.UserControls
                 textBox1.Text = person.id.ToString();
                 textBox2.Text = person.name;
                 textBox3.Text = person.age.ToString();
-                textBox4.Text = person.jobTitle.ToString();
+                comboBox1.Text = person.jobTitle.ToString();
                 textBox5.Text = person.job.ToString();
                 //MessageBox.Show($"It is: {person.name}!");
             }
@@ -96,6 +111,22 @@ namespace CRUD_Logistics.UserControls
         {
             var people = this.context.People.ToList();
             dataGridView_people_update.DataSource = people;
+        }
+
+        private void assign_job_id(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex != -1)
+            {
+
+                string selectedOption = comboBox1.SelectedItem.ToString();
+                var sqlQuery = $"SELECT * FROM Job AS j WHERE j.name = '{selectedOption}'";
+                var job = context.Job.FromSqlRaw(sqlQuery).FirstOrDefault();
+                textBox5.Text = job.id.ToString();
+            }
+            else
+            {
+                textBox5.Text = string.Empty;
+            }
         }
     }
 }

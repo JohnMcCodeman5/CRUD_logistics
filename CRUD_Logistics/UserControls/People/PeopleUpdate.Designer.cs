@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             panel_update = new Panel();
+            comboBox1 = new ComboBox();
             textBox5 = new TextBox();
             label1 = new Label();
-            textBox4 = new TextBox();
             label_update_job = new Label();
             label_update_name = new Label();
             label_update_id = new Label();
@@ -49,9 +49,9 @@
             // 
             // panel_update
             // 
+            panel_update.Controls.Add(comboBox1);
             panel_update.Controls.Add(textBox5);
             panel_update.Controls.Add(label1);
-            panel_update.Controls.Add(textBox4);
             panel_update.Controls.Add(label_update_job);
             panel_update.Controls.Add(label_update_name);
             panel_update.Controls.Add(label_update_id);
@@ -68,10 +68,19 @@
             panel_update.Size = new Size(1226, 547);
             panel_update.TabIndex = 3;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(740, 344);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(229, 23);
+            comboBox1.TabIndex = 14;
+            // 
             // textBox5
             // 
             textBox5.Location = new Point(740, 430);
             textBox5.Name = "textBox5";
+            textBox5.ReadOnly = true;
             textBox5.Size = new Size(229, 23);
             textBox5.TabIndex = 12;
             // 
@@ -84,13 +93,6 @@
             label1.Size = new Size(53, 21);
             label1.TabIndex = 13;
             label1.Text = "Job ID";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(739, 344);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(229, 23);
-            textBox4.TabIndex = 10;
             // 
             // label_update_job
             // 
@@ -211,7 +213,6 @@
         private Panel panel_update;
         private TextBox textBox5;
         private Label label1;
-        private TextBox textBox4;
         private Label label_update_job;
         private Label label_update_name;
         private Label label_update_id;
@@ -223,5 +224,6 @@
         private Button button_back;
         private Label label_update_age;
         private Label label_update_title;
+        private ComboBox comboBox1;
     }
 }
