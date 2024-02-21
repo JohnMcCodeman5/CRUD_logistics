@@ -39,57 +39,57 @@
             // 
             // button_menu_list
             // 
-            button_menu_list.Location = new Point(67, 153);
+            button_menu_list.Location = new Point(125, 152);
             button_menu_list.Name = "button_menu_list";
             button_menu_list.Size = new Size(158, 50);
             button_menu_list.TabIndex = 0;
             button_menu_list.Text = "List";
             button_menu_list.UseVisualStyleBackColor = true;
             button_menu_list.Click += button_menu_list_Click;
-            button_menu_list.MouseHover += button_menu_list_Hover;
             button_menu_list.MouseLeave += reset_description;
+            button_menu_list.MouseHover += button_menu_list_Hover;
             // 
             // button_menu_update
             // 
-            button_menu_update.Location = new Point(67, 359);
+            button_menu_update.Location = new Point(125, 358);
             button_menu_update.Name = "button_menu_update";
             button_menu_update.Size = new Size(158, 50);
             button_menu_update.TabIndex = 1;
             button_menu_update.Text = "Update";
             button_menu_update.UseVisualStyleBackColor = true;
             button_menu_update.Click += button_menu_update_Click;
-            button_menu_update.MouseHover += button_menu_update_Hover;
             button_menu_update.MouseLeave += reset_description;
+            button_menu_update.MouseHover += button_menu_update_Hover;
             // 
             // button_menu_delete
             // 
-            button_menu_delete.Location = new Point(67, 469);
+            button_menu_delete.Location = new Point(125, 468);
             button_menu_delete.Name = "button_menu_delete";
             button_menu_delete.Size = new Size(158, 50);
             button_menu_delete.TabIndex = 2;
             button_menu_delete.Text = "Delete";
             button_menu_delete.UseVisualStyleBackColor = true;
             button_menu_delete.Click += button_menu_delete_Click;
-            button_menu_delete.MouseHover += button_menu_delete_Hover;
             button_menu_delete.MouseLeave += reset_description;
+            button_menu_delete.MouseHover += button_menu_delete_Hover;
             // 
             // button_menu_add
             // 
-            button_menu_add.Location = new Point(67, 253);
+            button_menu_add.Location = new Point(125, 252);
             button_menu_add.Name = "button_menu_add";
             button_menu_add.Size = new Size(158, 50);
             button_menu_add.TabIndex = 3;
             button_menu_add.Text = "Add";
             button_menu_add.UseVisualStyleBackColor = true;
             button_menu_add.Click += button_menu_add_Click;
-            button_menu_add.MouseHover += button_menu_add_Hover;
             button_menu_add.MouseLeave += reset_description;
+            button_menu_add.MouseHover += button_menu_add_Hover;
             // 
             // richTextBox1
             // 
             richTextBox1.BackColor = SystemColors.Menu;
             richTextBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            richTextBox1.Location = new Point(67, 36);
+            richTextBox1.Location = new Point(408, 36);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.ReadOnly = true;
             richTextBox1.Size = new Size(417, 43);
@@ -98,7 +98,7 @@
             // 
             // button_logout
             // 
-            button_logout.Location = new Point(1170, 32);
+            button_logout.Location = new Point(858, 36);
             button_logout.Name = "button_logout";
             button_logout.Size = new Size(101, 39);
             button_logout.TabIndex = 5;
@@ -110,9 +110,9 @@
             // 
             richTextBox2.BackColor = SystemColors.Menu;
             richTextBox2.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            richTextBox2.Location = new Point(465, 153);
+            richTextBox2.Location = new Point(408, 152);
             richTextBox2.Name = "richTextBox2";
-            richTextBox2.Size = new Size(705, 366);
+            richTextBox2.Size = new Size(551, 366);
             richTextBox2.TabIndex = 6;
             richTextBox2.Text = "";
             // 
