@@ -1,2 +1,0 @@
-add a dropdown instead of plain text box when updating or adding elements
-first you have to take care of all table manipulation features

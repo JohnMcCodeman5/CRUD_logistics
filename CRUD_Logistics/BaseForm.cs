@@ -17,6 +17,7 @@ namespace CRUD_Logistics
     {
         private string username;
         private string password;
+        private string db_name;
         public AppDbContext context;
 
         public PeopleMenu peopleMenu;
@@ -27,13 +28,14 @@ namespace CRUD_Logistics
 
         private List<UserControl> userControls;
 
-        public BaseForm(string username, string password, FormLogin loginForm)
+        public BaseForm(string username, string password, string db_name, FormLogin loginForm)
         {
             this.username = username;
             this.password = password;
+            this.db_name = db_name;
             this.userControls = new List<UserControl>();
 
-            this.context = new AppDbContext(username, password);
+            this.context = new AppDbContext(username, password, db_name);
 
             this.peopleMenu = new PeopleMenu(context, this, loginForm);
             this.peopleList = new PeopleList(context, this);

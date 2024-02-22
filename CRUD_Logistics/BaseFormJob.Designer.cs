@@ -34,9 +34,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(1296, 569);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "BaseFormJob";
-            Text = "BaseFormJob";
+            Text = "'Job' Table Control";
             ResumeLayout(false);
         }
 

@@ -35,8 +35,10 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1296, 569);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "BaseForm";
-            Text = "BaseForm";
+            Text = "'People' Table Control";
             ResumeLayout(false);
         }
 
