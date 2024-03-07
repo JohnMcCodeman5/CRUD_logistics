@@ -5,7 +5,11 @@ A GUI CRUD app (built using C#, .NET and Entity Framework) designed to connect t
 
 Opening the app you are met with a login screen asking for DB credentials, the database and the table you need access to.
 
+![s1](screenshots/s1.PNG)
+
 From there, a menu with options to list, add, update or remove data is given. Each option opens an appropriate form and table to select entries.
+
+![s2](screenshots/s2.PNG)
 
 Users modify the DB by filling these forms and clicking a button to save changes and commit transactions.
 
@@ -14,6 +18,12 @@ You can switch between different databases and tables on the server, and you wil
 It's much simpler and faster to use and understand than writing regular SQL, especially when working with large amounts of data and if the end user is not an SQL programmer.
 
 Instead of triggers and procedures on the database itself, the app takes care of data consistency and implements needed restrictions, no need to worry about that.
+
+![s3](screenshots/s3.PNG)
+
+![s4](screenshots/s4.PNG)
+
+![s5](screenshots/s5.PNG)
 
 There is also an SQL script you can run to create what is needed to test the app.
 
